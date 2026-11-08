@@ -1,0 +1,11 @@
+{
+  "id": "env-supabase-auth-tests",
+  "name": "Supabase Auth - Testes Caixa Cinza",
+  "values": [
+    { "key": "base_url", "value": "https://SEU-PROJECT-REF.supabase.co", "type": "default", "enabled": true },
+    { "key": "api_key", "value": "COLE_AQUI_A_ANON_PUBLIC_KEY", "type": "secret", "enabled": true },
+    { "key": "email", "value": "usuario.teste@email.com", "type": "default", "enabled": true },
+    { "key": "password", "value": "SenhaTeste@123", "type": "secret", "enabled": true }
+  ],
+  "_postman_variable_scope": "environment"
+}
