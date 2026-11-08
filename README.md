@@ -2,18 +2,18 @@
 
 Este repositório documenta a atividade prática de **testes caixa cinza em API de autenticação**, utilizando o **Supabase** como provedor de autenticação, o **Postman Desktop** para execução das requisições e o **GitHub** para versionamento e documentação.
 
-- **Aluno:** [SEU NOME COMPLETO]
-- **RA / Matrícula:** [SEU RA]
-- **Disciplina / Turma:** [DISCIPLINA] / [TURMA]
-- **Data:** [DATA DA REALIZAÇÃO]
+- **Aluno:** [Gabriel de Oliveira Hanna]
+- **RA / Matrícula:** [251830]
+- **Disciplina / Turma:** [UI/UX e Testes de Software] / [AS406TSN4]
+- **Data:** [08/11/2026]
 
 ### Estrutura do repositório
 
 ```
 /README.md
-/postman/     -> coleção e environment exportados do Postman
-/prints/      -> evidências (capturas de tela reais)
-/planilha/    -> planilha de registro dos testes
+/postman/ - coleção e environment exportados do Postman
+/prints/  -evidências (capturas de tela reais)
+/planilha/- planilha de registro dos testes
 ```
 
 ---
