@@ -45,7 +45,7 @@ Em **Authentication → Users → Add user → Create new user**, cadastrei o us
 
 ### Credenciais da API
 Em **Project Settings → API** obtive:
-- **Project URL** (API URL): `https://[PROJECT-REF].supabase.co`
+- **Project URL** (API URL): `https://lwtlpzatmzbsgdgcitut.supabase.co`
 - **anon public key** (API KEY): `XXXXX` *(mascarada neste documento)*
 
 ### Objetivo da configuração
