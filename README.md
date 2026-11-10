@@ -124,11 +124,11 @@ Foram executados os 5 cenários obrigatórios, todos contra o mesmo endpoint, va
 
 | Cenário | Entrada Utilizada | Resultado Esperado | Resultado Obtido | Status |
 |---|---|---|---|---|
-| CT01 - Login válido | e-mail e senha corretos | Status 200 + access token | [PREENCHER com status e trecho real da resposta] | [OK/FALHA] |
-| CT02 - Senha incorreta | e-mail correto, senha errada | Erro de autenticação | [PREENCHER] | [OK/FALHA] |
-| CT03 - Usuário inexistente | e-mail não cadastrado | Acesso negado | [PREENCHER] | [OK/FALHA] |
-| CT04 - Campos vazios | `email: ""`, `password: ""` | Erro de validação | [PREENCHER] | [OK/FALHA] |
-| CT05 - Credenciais inválidas | e-mail mal formatado, senha curta | Mensagem de erro | [PREENCHER] | [OK/FALHA] |
+| CT01 - Login válido | e-mail e senha corretos | Status 200 + access token | Status 200 OK. JSON com access_token, refresh_token, token_type "bearer" e dados do usuário | OK |
+| CT02 - Senha incorreta | e-mail correto, senha errada | Erro de autenticação | Status 400. "error_code": "invalid_credentials", "msg": "Invalid login credentials". Sem access_token | OK |
+| CT03 - Usuário inexistente | e-mail não cadastrado | Acesso negado | Status 400. Mesma mensagem de erro. Sem access_token | OK |
+| CT04 - Campos vazios | `email: ""`, `password: ""` | Erro de validação | Status 400 "Bad Request".  "error_code": "validation_failed", | OK |
+| CT05 - Credenciais inválidas | e-mail mal formatado, senha curta | Mensagem de erro | Status 400 "Bad Request".  "error_code": "invalid_credentials", | OK |
 
 ### O que foi validado em cada teste
 Status HTTP, corpo JSON da resposta, mensagens de erro, presença/ausência do `access_token` e o comportamento geral da autenticação.
