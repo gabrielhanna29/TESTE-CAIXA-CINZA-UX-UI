@@ -168,7 +168,7 @@ O registro torna os testes **rastreáveis e repetíveis**, permite comparar o re
 
 | Total de testes | Sucesso | Falha |
 |---|---|---|
-| 5 | [N] | [N] |
+| 5 | 5 | 0 |
 
 ---
 
