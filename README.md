@@ -54,29 +54,27 @@ Disponibilizar um serviço de autenticação real, com um usuário válido conhe
 ### Evidências
 | Evidência | Print |
 |---|---|
-| Projeto criado | ![projeto](prints/01-projeto-criado.png) |
-| Painel do Supabase | ![painel](prints/02-painel-supabase.png) |
-| Autenticação por e-mail habilitada | ![auth](prints/03-auth-email-habilitada.png) |
-| Usuário criado | ![usuario](prints/04-usuario-criado.png) |
-| Credenciais da API (chave parcialmente oculta) | ![api](prints/05-credenciais-api.png) |
-| Identificação do aluno no ambiente | ![aluno](prints/06-identificacao-aluno.png) |
+| Projeto criado | ![projeto](prints/projeto-criado.png) |
+| Painel do Supabase | ![painel](prints/painel-supabase.png) |
+| Autenticação por e-mail habilitada | ![auth](prints/email-habilitada.png) |
+| Credenciais da API (chave parcialmente oculta) | ![api](prints/credenciais-api.png) |
 
 ---
 
 # Configuração do Postman
 
 ### Workspace
-Instalei o **Postman Desktop** e criei o workspace **[NOME DO WORKSPACE]** (Workspaces → Create Workspace), para manter a coleção e o environment desta atividade isolados.
+Instalei o **Postman Desktop** e criei o workspace **[Teste caixa cinza - Gabriel de Oliveira Hanna]** (Workspaces → Create Workspace), para manter a coleção e o environment desta atividade isolados.
 
 ### Environment
 Criei o environment **Supabase Auth - Testes Caixa Cinza** com as variáveis:
 
 | Variável | Descrição |
 |---|---|
-| `base_url` | URL da API do Supabase (`https://[PROJECT-REF].supabase.co`) |
-| `api_key` | API KEY (anon public key) do projeto |
-| `email` | E-mail do usuário de teste criado no Supabase |
-| `password` | Senha do usuário de teste |
+| `base_url` | URL da API do Supabase (`https://lwtlpzatmzbsgdgcitut.supabase.co`) |
+| `api_key` | API KEY (anon public key) do projeto (`sb_publishable_1eRqmptVCQZKSQlQs0OOHg_HVAe1Kbb`) |
+| `email` | E-mail do usuário de teste criado no Supabase (`gabrielhanna29@gmail.com`)|
+| `password` | Senha do usuário de teste (`Testecaixacinza`)|
 
 ### Finalidade das variáveis
 Separar os dados de configuração das requisições: se a URL, a chave ou as credenciais mudarem, altera-se apenas o environment, e as requisições usam `{{base_url}}`, `{{api_key}}`, `{{email}}` e `{{password}}`. Também evita expor segredos dentro das requisições.
@@ -87,10 +85,9 @@ Será criada uma coleção com uma requisição `POST` por cenário de teste. Ca
 ### Evidências
 | Evidência | Print |
 |---|---|
-| Workspace criado | ![workspace](prints/07-workspace.png) |
-| Environment criado | ![env](prints/08-environment.png) |
-| Variáveis configuradas | ![vars](prints/09-variaveis.png) |
-| Organização do Postman (coleção) | ![org](prints/10-organizacao-postman.png) |
+| Workspace criado | ![workspace](prints/workspace.png) |
+| Environment criado | ![env](prints/environiments.png) |
+| Variáveis configuradas | ![vars](prints/variaveis.png) |
 
 ---
 
@@ -112,18 +109,10 @@ Será criada uma coleção com uma requisição `POST` por cenário de teste. Ca
 
 ```json
 {
-  "email": "usuario@email.com",
-  "password": "123456"
+  "email": "gabrielhanna29@gmail.com",
+  "password": "Testecaixacinza"
 }
 ```
-
-### Evidências
-| Evidência | Print |
-|---|---|
-| Endpoint configurado | ![endpoint](prints/11-endpoint.png) |
-| Headers | ![headers](prints/12-headers.png) |
-| Body JSON | ![body](prints/13-body.png) |
-| Requisição criada no Postman | ![req](prints/14-requisicao-criada.png) |
 
 ---
 
@@ -150,21 +139,18 @@ Status HTTP, corpo JSON da resposta, mensagens de erro, presença/ausência do `
 ### Evidências
 | Evidência | Print |
 |---|---|
-| Teste válido (200 + `access_token`) | ![ct01](prints/15-ct01-login-valido.png) |
-| Senha incorreta | ![ct02](prints/16-ct02-senha-incorreta.png) |
-| Usuário inexistente | ![ct03](prints/17-ct03-usuario-inexistente.png) |
-| Campos vazios | ![ct04](prints/18-ct04-campos-vazios.png) |
-| Credenciais inválidas | ![ct05](prints/19-ct05-credenciais-invalidas.png) |
-| Resultado dos *tests* do Postman (Test Results) | ![results](prints/20-test-results.png) |
-
-> No print do CT01, ocultar parte do `access_token`.
+| Teste válido (200 + `access_token`) | ![ct01](prints/teste-01.png) |
+| Senha incorreta | ![ct02](prints/teste-02.png) |
+| Usuário inexistente | ![ct03](prints/teste-03.png) |
+| Campos vazios | ![ct04](prints/teste-04.png) |
+| Credenciais inválidas | ![ct05](prints/teste-05.png) |
 
 ---
 
 # Registro dos Testes
 
 ### Como os testes foram registrados
-Cada execução foi registrada na planilha [`planilha/registro_testes.xlsx`](planilha/registro_testes.xlsx) com os campos: ID do teste, Cenário, Entrada, Resultado esperado, Resultado obtido, Status (Sucesso/Falha) e Observações.
+Cada execução foi registrada na planilha [`planilha/registro_testes.xlsx`](planilha/registro_testes.xlsx) com os campos: ID do teste, Cenário, Entrada, Resultado esperado, Resultado obtido, Status (Sucesso/Falha).
 
 ### Importância da documentação dos testes
 O registro torna os testes **rastreáveis e repetíveis**, permite comparar o resultado esperado com o obtido, serve de evidência para auditoria e facilita a identificação de regressões quando a API mudar.
@@ -173,7 +159,7 @@ O registro torna os testes **rastreáveis e repetíveis**, permite comparar o re
 [LISTE as falhas reais registradas na planilha, ou escreva que nenhuma falha foi identificada.]
 
 ### Evidências
-![planilha](prints/21-planilha-preenchida.png)
+![planilha](prints/planilha-preenchida.png)
 
 Exemplos de registros:
 
@@ -190,15 +176,12 @@ Exemplos de registros:
 |---|---|---|
 | 5 | [N] | [N] |
 
-[Resuma em 3 a 5 linhas o que os resultados mostram: ex.: o login válido retornou 200 com token JWT; os cenários inválidos retornaram status 4xx sem `access_token`, com mensagens de erro no JSON.]
-
 ---
 
 # Conclusão
 
-- **Os testes foram executados corretamente?** [Sim/Não e justificativa]
-- **A autenticação funcionou?** [Descreva com base nos resultados reais]
-- **Dificuldades encontradas:** [ex.: localizar a API key, configurar variáveis, confirmar o usuário]
-- **Falhas identificadas:** [as reais, ou "nenhuma"]
-- **Melhorias possíveis:** [ex.: testes de bloqueio por tentativas excessivas (rate limit), expiração e renovação do token via `refresh_token`, senha fraca, uso de e-mail com espaços/maiúsculas, automação da coleção por Newman em CI]
-- **Importância dos testes caixa cinza em APIs:** permitem validar o contrato (endpoint, headers, body, status) e o comportamento de segurança da autenticação com conhecimento parcial do sistema, encontrando falhas de validação e de controle de acesso sem depender do código interno nem de interface gráfica.
+- **Os testes foram executados corretamente?** [Sim]
+- **A autenticação funcionou?** [Sim]
+- **Dificuldades encontradas:** [Localizar a API key, configurar variáveis, confirmar o usuário]
+- **Falhas identificadas:** [Nenhuma]
+- **Melhorias possíveis:** [Testes de bloqueio por tentativas excessivas (rate limit), expiração e renovação do token via `refresh_token`, senha fraca, uso de e-mail com espaços/maiúsculas, automação da coleção por Newman em CI]
