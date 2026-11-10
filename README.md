@@ -174,8 +174,8 @@ O registro torna os testes **rastreáveis e repetíveis**, permite comparar o re
 
 # Conclusão
 
-- **Os testes foram executados corretamente?** [Sim]
-- **A autenticação funcionou?** [Sim]
-- **Dificuldades encontradas:** [Localizar a API key, configurar variáveis, confirmar o usuário]
-- **Falhas identificadas:** [Nenhuma]
-- **Melhorias possíveis:** [Testes de bloqueio por tentativas excessivas (rate limit), expiração e renovação do token via `refresh_token`, senha fraca, uso de e-mail com espaços/maiúsculas, automação da coleção por Newman em CI]
+- **Os testes foram executados corretamente?** Sim
+- **A autenticação funcionou?** Sim
+- **Dificuldades encontradas:** Localizar a API key, configurar variáveis, confirmar o usuário
+- **Falhas identificadas:** Nenhuma
+- **Melhorias possíveis:** Testes de bloqueio por tentativas excessivas (rate limit), expiração e renovação do token via `refresh_token`, senha fraca, uso de e-mail com espaços/maiúsculas, automação da coleção por Newman em CI
