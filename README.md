@@ -161,12 +161,6 @@ O registro torna os testes **rastreáveis e repetíveis**, permite comparar o re
 ### Evidências
 ![planilha](prints/planilha-preenchida.png)
 
-Exemplos de registros:
-
-| ID | Cenário | Entrada | Esperado | Obtido | Status | Observações |
-|---|---|---|---|---|---|---|
-| CT01 | Login válido | [..] | 200 + token | [..] | [..] | [..] |
-| CT02 | Senha incorreta | [..] | Erro de autenticação | [..] | [..] | [..] |
 
 ---
 
